@@ -71,3 +71,47 @@ for i in range (3, 5):
                     font = ("Arial", 10, "bold"),
                     command = lambda n = name, f = file: play_sound(n, f))
     btn.grid(row = 0, column = i-2, padx=10, pady=10)
+
+stop_btn = tk. Button(windows,
+                      text = "STOP",
+                      width = 25,
+                      bg = "red",
+                      fg = "white",
+                      font = ("Arial", 11, "bold"),
+                      command = stop_sound)
+stop_btn.pack(pady = 15)
+
+volume_label = tk.Label(windows,
+                        text = "VOLUME",
+                        bg = "#1e1e1e",
+                        fg = "white",
+                        font = ("Arial", 12, "bold"))
+volume_label.pack()
+
+volume_slider = tk.Scale(windows,
+                         from_ = 0,
+                         to = 1,
+                         resolution = 0.01,
+                         orient = "horizontal",
+                         length = 300,
+                         bg = "#1e1e1e",
+                         fg = "white",
+                         highlightthickness = 0,
+                         command = change_volume)
+volume_slider.set(0.5)
+volume_slider.pack()
+
+volume_value_label = tk.Label(windows,
+                              text = "50%",
+                              bg = "#1e1e1e",
+                              fg = "white")
+volume_value_label.pack()
+
+status_label = tk.Label(windows,
+                        text = "NO SOUND PLAYING",
+                        bg = "#1e1e1e",
+                        fg = "white",
+                        font = ("Arial", 10, "italic"))
+status_label.pack(pady = 10)
+
+windows.mainloop()
