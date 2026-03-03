@@ -22,7 +22,7 @@ def play_sound(name, file):
         pygame.mixer.music.load(file)
         pygame.mixer.music.set_volume(volume_slider.get())
         pygame.mixer.music.play(-1)
-        status_label.config(text=f"Looping: {name}")
+        status_label.config(text=f"Playing: {name}")
     except:
         messagebox.showerror("Error", f"Cannot play {file}")
 
@@ -54,7 +54,7 @@ for i in range (3):
                     height = 5,
                     bg = "#333333",
                     fg = "white",
-                    activebackground = "#555555",
+                    activebackground = "#98FF98",
                     font = ("Arial", 10, "bold"),
                     command = lambda n = name, f = file: play_sound(n, f))
     btn.grid(row = 0, column = i, padx = 10, pady = 10)
@@ -67,7 +67,7 @@ for i in range (3, 5):
                     height = 5,
                     bg = "#333333",
                     fg = "white",
-                    activebackground = "#555555",
+                    activebackground = "#98FF98",
                     font = ("Arial", 10, "bold"),
                     command = lambda n = name, f = file: play_sound(n, f))
     btn.grid(row = 1, column = i-3, padx=10, pady=10)
