@@ -7,7 +7,7 @@ pygame.mixer.init()
 windows = tk.Tk()
 windows.title("DJ Soundboard")
 windows.geometry("500x520")
-windows.configure(bg="1e1e1e")
+windows.configure(bg="#1e1e1e")
 
 sounds = {"Laugh": "laugh_sound.mp3",
           "Sad": "sad_sound.mp3",
@@ -41,7 +41,7 @@ title = tk.Label(windows,
                  fg = "white")
 title.pack(pady = 20)
 
-grid_frame = tk.Frame(windows, bg = "1e1e1e")
+grid_frame = tk.Frame(windows, bg = "#1e1e1e")
 grid_frame.pack()
 
 sound_list = list(sounds.items())
@@ -70,7 +70,7 @@ for i in range (3, 5):
                     activebackground = "#555555",
                     font = ("Arial", 10, "bold"),
                     command = lambda n = name, f = file: play_sound(n, f))
-    btn.grid(row = 0, column = i-2, padx=10, pady=10)
+    btn.grid(row = 1, column = i-3, padx=10, pady=10)
 
 stop_btn = tk. Button(windows,
                       text = "STOP",
