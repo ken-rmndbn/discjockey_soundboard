@@ -37,7 +37,7 @@ def change_volume(value):
 title = tk.Label(windows,
                  text = "SOUNDBOARD PAD",
                  font =("Arial", 18, "bold"),
-                 bg ="1e1e1e",
+                 bg ="#1e1e1e",
                  fg = "white")
 title.pack(pady = 20)
 
@@ -45,3 +45,29 @@ grid_frame = tk.Frame(windows, bg = "1e1e1e")
 grid_frame.pack()
 
 sound_list = list(sounds.items())
+
+for i in range (3):
+    name, file = sound_list[i]
+    btn = tk.Button(grid_frame,
+                    text = name,
+                    width = 15,
+                    height = 5,
+                    bg = "#333333",
+                    fg = "white",
+                    activebackground = "#555555",
+                    font = ("Arial", 10, "bold"),
+                    command = lambda n = name, f = file: play_sound(n, f))
+    btn.grid(row = 0, column = i, padx = 10, pady = 10)
+
+for i in range (3, 5):
+    name, file = sound_list[i]
+    btn = tk.Button(grid_frame,
+                    text = name,
+                    width = 15,
+                    height = 5,
+                    bg = "#333333",
+                    fg = "white",
+                    activebackground = "#555555",
+                    font = ("Arial", 10, "bold"),
+                    command = lambda n = name, f = file: play_sound(n, f))
+    btn.grid(row = 0, column = i-2, padx=10, pady=10)
