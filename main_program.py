@@ -34,14 +34,14 @@ def change_volume(value):
     pygame.mixer.music.set_volume(float(value))
     volume_value_label.config(text=f"{int(float(value)*100)}%")
 
-title = tk.Label(window,
+title = tk.Label(windows,
                  text = "SOUNDBOARD PAD",
                  font =("Arial", 18, "bold"),
                  bg ="1e1e1e",
                  fg = "white")
 title.pack(pady = 20)
 
-grid_frame = tk.Frame(window, bg = "1e1e1e")
+grid_frame = tk.Frame(windows, bg = "1e1e1e")
 grid_frame.pack()
 
 sound_list = list(sounds.items())
