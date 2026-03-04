@@ -56,7 +56,7 @@ for i in range (3):
                     fg = "white",
                     activebackground = "#98FF98",
                     font = ("Arial", 10, "bold"),
-                    command = lambda n = name, f = file: play_sound(n, f))
+                    command = lambda sound_name = name, sound_file = file: play_sound(sound_name, sound_file))
     button.grid(row = 0, column = i, padx = 10, pady = 10)
 
 for i in range (3, 5):
