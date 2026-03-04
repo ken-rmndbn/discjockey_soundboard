@@ -48,7 +48,7 @@ sound_list = list(sounds.items())
 
 for i in range (3):
     name, file = sound_list[i]
-    btn = tk.Button(grid_frame,
+    button = tk.Button(grid_frame,
                     text = name,
                     width = 15,
                     height = 5,
@@ -57,11 +57,11 @@ for i in range (3):
                     activebackground = "#98FF98",
                     font = ("Arial", 10, "bold"),
                     command = lambda n = name, f = file: play_sound(n, f))
-    btn.grid(row = 0, column = i, padx = 10, pady = 10)
+    button.grid(row = 0, column = i, padx = 10, pady = 10)
 
 for i in range (3, 5):
     name, file = sound_list[i]
-    btn = tk.Button(grid_frame,
+    button = tk.Button(grid_frame,
                     text = name,
                     width = 15,
                     height = 5,
@@ -70,9 +70,9 @@ for i in range (3, 5):
                     activebackground = "#98FF98",
                     font = ("Arial", 10, "bold"),
                     command = lambda n = name, f = file: play_sound(n, f))
-    btn.grid(row = 1, column = i-3, padx=10, pady=10)
+    button.grid(row = 1, column = i-3, padx=10, pady=10)
 
-stop_btn = tk. Button(window,
+stop_button = tk. Button(window,
                       text = "STOP",
                       width = 25,
                       bg = "red",
@@ -80,7 +80,7 @@ stop_btn = tk. Button(window,
                       activebackground = "black",
                       font = ("Arial", 11, "bold"),
                       command = stop_sound)
-stop_btn.pack(pady = 15)
+stop_button.pack(pady = 15)
 
 volume_label = tk.Label(window,
                         text = "VOLUME",
